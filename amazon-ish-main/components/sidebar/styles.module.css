@@ -1,0 +1,78 @@
+.nav {
+	width: clamp(80px, 10vw, 100px);
+	background-color: var(--color-white);
+	height: 100vh;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 5rem;
+	box-shadow: 0 0 1rem rgb(26 26 44 / 5%);
+	justify-content: space-between;
+	padding: 3rem 0;
+	transition: all 0.2s ease;
+}
+
+.logoContainer {
+	width: 2rem;
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+.navLinks,
+.profileIconContainer {
+	width: 2rem;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.navLinks {
+	width: 36px;
+}
+
+.navLinks li {
+	margin-inline: auto;
+	margin-bottom: 1.75rem;
+}
+
+.navLinks svg {
+	width: 30px;
+	transition: transform 0.15s ease;
+}
+
+.navLink {
+	color: var(--color-dark);
+}
+
+.navLink,
+.navLink__active {
+	cursor: pointer;
+}
+
+.navLink__active svg {
+	fill: var(--color-dark);
+}
+
+.navLink svg {
+	fill: var(--color-white);
+	stroke: var(--color-dark);
+}
+
+.navLinks svg:hover,
+.profileIconContainer svg:hover {
+	transform: scale(1.15);
+}
+
+.profileIconContainer svg {
+	transition: transform 0.15s ease;
+}
+
+@media (max-width: 550px) {
+	.nav {
+		/* display: none; */
+		/* transform: translateX(-100%); */
+		z-index: 2;
+	}
+}
